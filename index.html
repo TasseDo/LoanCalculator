@@ -34,8 +34,9 @@
 
       <label>
         Duration:
-        <div>
-          <input type="number" id="loanDuration" placeholder="e.g. 25" />
+        <div class="input-wrapper">
+          <span id="durationindicator">Y</span>
+          <input type="number" id="loanDuration" placeholder="" />
         </div>
         <div class="select">
           <select id="durationType">
@@ -82,6 +83,14 @@
         wrapper.classList.remove("animatedborder");
       });
     });
+
+    document.getElementById('durationType').addEventListener('change', function() {
+    var value = this.value;
+    if (value) {
+        // Capitalize the first letter
+        document.getElementById('durationindicator').innerText = value.charAt(0).toUpperCase();
+    }
+});
 
     // Format the loan amount input and interest rate input on blur
     function formatInput(inputElement) {
