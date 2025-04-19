@@ -125,6 +125,18 @@ input[type="number"] {
     gap: 5em;
     box-sizing: border-box;
 }
+@media screen and (max-width:600px) {
+  html,body{
+    margin: 4px;
+    padding: 0;
+box-sizing: border-box;
+  }
+  .inputsummarywrapper{
+    gap: 0.5em;
+  }
+}
+
+
 
 .summarywrapper{
     border: 1px white solid;
