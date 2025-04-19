@@ -1,0 +1,272 @@
+body {
+    color: whitesmoke;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #202020;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 2px, transparent 0);
+  background-size: 30px 30px;
+  background-position: -5px -5px
+}
+
+h1{
+color: rgb(133, 139, 211);
+}
+
+th{
+    color: rgb(133, 139, 211);
+    }
+
+label,
+input {
+  display: block;
+  font-size: 16px;
+}
+label{
+    font-size: 18px;
+    font-weight: bold;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    margin-bottom: 10px;
+}
+select{
+    width: fit-content;
+}
+table,
+th,
+td {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  padding: 8px;
+}
+table {
+  margin-top: 20px;
+  width: 100%;
+}
+.year-end {
+  background-color: rgb(66, 69, 117);
+  color: whitesmoke;
+  font-weight: bold;
+  text-align: center;
+}
+input{
+    width: 301px;
+    height: 56px;
+    border-radius: 10px;
+    color: white;
+    background-color: #010102;
+    outline: none;
+    box-shadow: none;
+    border-color: transparent;
+    padding-inline: 5px;
+}
+input:focus {
+    border-color: transparent;
+  }
+
+/* Remove arrows in Chrome, Safari, Edge */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove arrows in Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.animatedborder {
+  width: fit-content;
+  background: black;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.animatedborder::after,
+.animatedborder::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle), rgb(95, 100, 170), rgb(115, 190, 115));
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+.animatedborder::before {
+    filter: blur(1rem);
+    opacity: 0.5;
+}
+
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }
+    to{
+        --angle: 360deg;
+    }
+}
+
+.inputsummarywrapper{
+    display: flex;
+    gap: 5em;
+    box-sizing: border-box;
+}
+
+.summarywrapper{
+    border: 1px white solid;
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+}
+select {
+    /* Reset Select */
+    appearance: none;
+    outline: 10px red;
+    border: 0;
+    box-shadow: none;
+    /* Personalize */
+    flex: 1;
+    padding: 0 1em;
+    color: #fff;
+    background-color: rgb(66, 69, 117);
+    background-image: none;
+    cursor: pointer;
+  }
+/* Remove IE arrow */
+select::-ms-expand {
+    display: none;
+  }
+  /* Custom Select wrapper */
+  .select {
+    position: relative;
+    display: flex;
+    width: 8em;
+    height: 2em;
+    border-radius: .25em;
+    overflow: hidden;
+  }
+  /* Arrow */
+  .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0.4em;
+    background-color: rgb(95, 100, 170);
+    transition: .25s all ease;
+    pointer-events: none;
+  }
+  /* Transition */
+  .select:hover::after {
+    color: rgb(115, 190, 115);
+  }
+
+  .animatedborder2 {
+    width: fit-content;
+    background: black;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  @property --angle{
+      syntax: "<angle>";
+      initial-value: 0deg;
+      inherits: false;
+  }
+  
+  .animatedborder2::after,
+  .animatedborder2::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle),transparent 90%, rgb(95, 100, 170));
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+  }
+  .animatedborder2::before {
+      filter: blur(1rem);
+      opacity: 0.5;
+  }
+
+  .animatedborder2:hover::after{
+    padding: 4px;
+  }
+  .animatedborder2:hover::before{
+    filter: blur(1.2rem);
+    opacity: 0.7;
+  }
+  button:hover{
+background: rgb(37, 39, 66);
+box-shadow: 0 0 0 1px rgb(95, 100, 170);
+  }
+  button:active{
+    background: rgb(19, 20, 34);
+    box-shadow: inset 0 0 0 1px rgb(95, 100, 170);
+  }
+
+  button {
+    width: 9em;
+    position: relative;
+    height: 3.5em;
+    outline: none;
+    border-color: transparent;
+    background-color: transparent;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+
+  .moneygreen{
+    color: rgb(115, 190, 115);
+  }
+  .debtred{
+    color: rgb(228, 82, 82);
+  }
+
+  .input-wrapper {
+    position: relative;
+    width: 200px; /* Adjust width as needed */
+  }
+
+  .input-wrapper input {
+    width: 100%;
+    padding-left: 25px; /* To make space for the dollar sign */
+    box-sizing: border-box;
+  }
+
+  .input-wrapper span {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+  }
+
+  input:-webkit-autofill {
+    background-color: transparent !important;  /* Make the background transparent */
+    transition: background-color 5000s ease-in-out 0s !important;  /* Prevent autofill background color change */
+    -webkit-text-fill-color: whitesmoke !important;  /* Ensure text color stays black */
+  }
